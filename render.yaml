@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: kochi-bay-invoice-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot_v4_8.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
